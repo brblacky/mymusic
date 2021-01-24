@@ -6,6 +6,14 @@ module.exports = {
     exec: (msg) => {
         const { music } = msg.guild;
         if (!music.player || !music.player.playing) return msg.channel.send(util.embed().setDescription("❌ | Currently not playing anything."));
-        msg.channel.send(util.embed().setDescription(`🎶 | Now playing **${music.current.info.title}**.`));
+        msg.channel.send(util.embed()
+        
+        
+           .setAuthor("Nowplaying", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif" ,)
+            
+        
+        .setDescription(`🎶 ${music.current.info.title}.`));
+    
+      
     }
 };
